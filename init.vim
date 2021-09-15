@@ -45,6 +45,13 @@ Plug 'vim-test/vim-test'
 " Rust plugin mainly for rustfmt
 Plug 'rust-lang/rust.vim'
 
+" Fuzzy search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+" LSP Extensions (some day this may be able to go away when LSP support for
+" some things like type hinting, etc. is better)
+Plug 'nvim-lua/lsp_extensions.nvim'
+
 call plug#end()
 
 set termguicolors
@@ -162,3 +169,7 @@ set nu rnu
 
 " Run rustfmt on save
 let g:rustfmt_autosave = 1
+
+" Enable type inlay hints
+autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs
+			\ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
