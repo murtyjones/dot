@@ -47,6 +47,7 @@ Plug 'rust-lang/rust.vim'
 
 " Fuzzy search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " LSP Extensions (some day this may be able to go away when LSP support for
 " some things like type hinting, etc. is better)
@@ -162,6 +163,9 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
+
+" Fuzzy search using fzf
+nmap <C-P> :FZF<CR>
 
 " toggle hybrid line numbers
 set number relativenumber
