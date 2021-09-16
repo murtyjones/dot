@@ -1,5 +1,5 @@
 font:
-  size: 20
+  size: 16
 key_bindings:
   - { key: Comma, mods: Command, command: {program: "sh", args: ["-c","open ~/.config/alacritty/alacritty.yml"]}     }
   - { key: N, mods: Command,  action: SpawnNewInstance       }
