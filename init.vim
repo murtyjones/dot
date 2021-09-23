@@ -45,7 +45,7 @@ Plug 'vim-test/vim-test'
 " Rust plugin mainly for rustfmt
 Plug 'rust-lang/rust.vim'
 
-" Fuzzy search
+" Fuzy search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -113,11 +113,7 @@ cmp.setup({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Insert,
-      select = true,
-    })
+    ['<C-e>'] = cmp.mapping.close()
   },
 
   -- Installed sources
@@ -154,7 +150,7 @@ set signcolumn=yes
 " 300ms of no cursor movement to trigger CursorHold
 set updatetime=300
 " Show diagnostic popup on cursor hold
-autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics({ focusable = false })
 
 " Shortcuts for in-file testing
 " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
