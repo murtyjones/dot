@@ -11,3 +11,7 @@
 
 1. `brew install alacritty`
 2. Copy `.alacritty.yml` from this repo to `~/.alacritty.yml`
+
+## tmux
+
+1. `brew install tmux`
