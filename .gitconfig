@@ -5,7 +5,7 @@
 	clean = git-lfs clean -- %f
 [user]
 	name = Marty Jones
-	email = <<<<<<REDACTED FILL THIS IN>>>>>
+	email = <SNIP>
 [alias]
 	st = status -sb
 	ll = log --oneline
@@ -15,5 +15,7 @@
 	d = diff
 	dv = difftool -t vimdiff -y
 	gl = config --global -l
+	done1 = "!f() { git checkout master && git branch -D @{-1}; }; f"
+	done2 = "!f() { git checkout main && git branch -D @{-1}; }; f"
 [difftool]
 	trustExitCode = true
