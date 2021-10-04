@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 " Collection of common configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
@@ -52,6 +52,15 @@ Plug 'junegunn/fzf.vim'
 " LSP Extensions (some day this may be able to go away when LSP support for
 " some things like type hinting, etc. is better)
 Plug 'nvim-lua/lsp_extensions.nvim'
+
+" Shortcuts for grep nav, ]q and [q
+Plug 'tpope/vim-unimpaired'
+
+" Shortcuts to enable surround things with quotes, asterisks, etc
+Plug 'tpope/vim-surround'
+
+" Shortcuts to enable commenting out code
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -169,6 +178,10 @@ set nu rnu
 
 " Run rustfmt on save
 let g:rustfmt_autosave = 1
+
+" Make fzf take up more space
+let g:fzf_preview_window = 'right:50%'
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6  }  }
 
 " Enable type inlay hints
 autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs
