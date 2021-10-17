@@ -9,3 +9,13 @@ export NVM_DIR="$HOME/.nvm"
 source <(kubectl completion zsh)
 alias k=kubectl
 complete -F __start_kubectl k
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+source /Users/murtyjones/google-cloud-sdk/path.zsh.inc
+
+# The next line enables zsh completion for gcloud.
+source /Users/murtyjones/google-cloud-sdk/completion.zsh.inc
