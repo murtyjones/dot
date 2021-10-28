@@ -19,3 +19,8 @@ source /Users/murtyjones/google-cloud-sdk/path.zsh.inc
 
 # The next line enables zsh completion for gcloud.
 source /Users/murtyjones/google-cloud-sdk/completion.zsh.inc
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/2.2.18/gems/vagrant-2.2.18/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
