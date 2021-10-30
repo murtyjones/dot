@@ -38,5 +38,5 @@ Example:
 ```sh
 # From the repo root:
 rm -rf init.vim
-ln -s ~/.config/nvim/init.vim init.vim
+ln ~/.config/nvim/init.vim init.vim
 ```
