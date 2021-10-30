@@ -62,6 +62,9 @@ Plug 'tpope/vim-surround'
 " Shortcuts to enable commenting out code
 Plug 'tpope/vim-commentary'
 
+" TOML syntax hightlighting
+Plug 'cespare/vim-toml', { 'branch': 'main' }
+
 call plug#end()
 
 set termguicolors
@@ -196,3 +199,8 @@ nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnew<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
+
+" do not automatically wrap on load
+set nowrap
+" do not automatically wrap text when typing
+set formatoptions-=t
