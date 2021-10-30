@@ -1,3 +1,23 @@
+# For kubectl completions
+autoload -Uz compinit
+compinit
+
+# For kubectl `k` alias
+source <(kubectl completion zsh)
+alias k=kubectl
+complete -F __start_kubectl k
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
+# The next line updates PATH for the Google Cloud SDK.
+source /Users/murtyjones/google-cloud-sdk/path.zsh.inc
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/2.2.18/gems/vagrant-2.2.18/contrib/zsh $fpath)
+compinit
+
+###### Oh my Zsh:
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -73,6 +93,7 @@ ZSH_THEME="robbyrussell"
 plugins=( 
     git
     zsh-autosuggestions
+    zsh-nvm
 )
 
 source $ZSH/oh-my-zsh.sh
