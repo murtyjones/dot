@@ -8,4 +8,4 @@ vim.opt.path:append "**"
 vim.opt.wildignorecase = true
 vim.opt.wildignore:append "**/node_modules/*"
 vim.opt.wildignore:append "**/.git/*"
-
+vim.g.netrw_banner=0 -- hide annoying banner
