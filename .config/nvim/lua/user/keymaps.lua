@@ -9,4 +9,5 @@ vim.g.mapleader = " "
 
 keymap("n", ";", ":", opts)
 keymap("n", ";;", ";", opts)
+keymap("n", ":", "<Nop>", opts)
 

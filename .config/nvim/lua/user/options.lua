@@ -9,3 +9,5 @@ vim.opt.wildignorecase = true
 vim.opt.wildignore:append "**/node_modules/*"
 vim.opt.wildignore:append "**/.git/*"
 vim.g.netrw_banner=0 -- hide annoying banner
+vim.g.netrw_liststyle=3 -- tree view
+
